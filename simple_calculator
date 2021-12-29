@@ -1,0 +1,37 @@
+#include <stdio.h>
+//#pragma warning(disable:4996)		// C4996 오류 무시
+// 간단한 계산기 만들기
+
+int main(void)
+{
+	char o;
+	int x, y;
+	while (1)
+	{
+		printf("수식을 입력하세요 : ");
+		scanf("%d %c %d", &x, &o, &y);		// scanf 함수 sdl 검사 해제해야 사용 가능
+		if (o == '+')
+		{
+			printf("%d %c %d = %d\n", x, o, y, x + y);
+		}
+		else if (o == '-')
+		{
+			printf("%d %c %d = %d\n", x, o, y, x - y);
+		}
+		else if (o == '*')
+		{
+			printf("%d %c %d = %d\n", x, o, y, x * y);
+		}
+		else if (o == '/')
+		{
+			printf("%d %c %d = %d\n", x, o, y, x / y);
+		}
+		else
+		{
+			printf("해당 연산자는 지원하지 않습니다.\n");
+		}
+	}
+	return 0;
+}
+
+// 간단한 계산기 만들기
