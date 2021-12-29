@@ -46,5 +46,3 @@ int main(void)
 	}
 	return 0;
 }
-
-// 간단한 계산기 만들기
