@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int hour;
+int minute;
+int minuteadd;
+char question;
+
+void counter()
+{
+	minute += minuteadd;
+	hour += minute / 60;
+	minute %= 60;
+	hour %= 24;
+}
+
+int main(void)
+{
+	while (1)
+	{
+		printf("시를 입력하세요 : ");
+		scanf("%d", &hour);
+		printf("분을 입력하세요 : ");
+		scanf("%d", &minute);
+		printf("더할 분을 입력하세요 : ");
+		scanf("%d", &minuteadd);
+		counter();
+		printf("더해진 시간은 %d시 %d분 입니다.\n", hour, minute);
+		getchar();
+		printf("프로그램을 종료하시겠습니까? (y/n) : ");
+		scanf("%c", &question);
+		if (question == 'y' || question == 'Y')
+		{
+			break;
+		}
+		else if (question == 'n' || question == 'N')
+		{
+			continue;
+		}
+		else
+		{
+			printf("입력이 잘못되었습니다.");
+		}
+	}
+	return 0;
+}
